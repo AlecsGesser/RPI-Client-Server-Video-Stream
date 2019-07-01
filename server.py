@@ -19,8 +19,8 @@ def process(image):
             flags = cv2.CASCADE_SCALE_IMAGE
         )
         #print("Detected {0} faces!".format(len(faces)))
+        image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
         for (x, y, w, h) in faces:
-            image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
             cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
         return image
 
