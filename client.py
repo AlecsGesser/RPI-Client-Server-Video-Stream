@@ -41,7 +41,7 @@ def process(frame):
         
     return frame_blured
 
-sender = imagezmq.ImageSender(connect_to='tcp://192.168.1.101:5555')
+sender = imagezmq.ImageSender(connect_to='tcp://127.0.0.1:5555')
 
 rpi_name = sys.argv[2]
 if sys.argv[1].isdigit(): 
