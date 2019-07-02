@@ -60,11 +60,11 @@ else:
 
 cv2.waitKey(1000)   # VideCapture loading
 jpeg_quality = 60 # 95 opencv default  
-while True:  
+ret, image = picam.read()
+while ret:  
     ret, image = picam.read()
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     image = process(image)
     ret_code, jpg_buffer = cv2.imencode(".jpg", image, [int(cv2.IMWRITE_JPEG_QUALITY), jpeg_quality])
     sender.send_jpg(rpi_name, jpg_buffer)
-    cv2.imshow("client", image)
     cv2.waitKey(1)
