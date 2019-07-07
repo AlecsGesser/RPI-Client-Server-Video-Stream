@@ -1,14 +1,3 @@
-""" imagezmq: Transport OpenCV images via ZMQ.
-
-Classes that transport OpenCV images from one computer to another. For example,
-OpenCV images gathered by a Raspberry Pi camera could be sent to another
-computer for displaying the images using cv2.imshow() or for further image
-processing. See API and Usage Examples for details.
-
-Copyright (c) 2017 by Jeff Bass.
-License: MIT, see LICENSE for more details.
-"""
-
 import zmq
 import numpy as np
 import cv2
