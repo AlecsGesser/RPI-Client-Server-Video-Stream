@@ -20,11 +20,11 @@ python3 server.py
 #### Camera Capture
 
 ```bash
-python3 client.py camera_option(0...9)
+python3 client.py camera_option(0...9) windowname serverIP
 ```
 
 #### Video Stream
 
 ```bash
-python3 client.py video_path
+python3 client.py video_path windowname serverIP
 ```
